@@ -11,20 +11,20 @@ source:
   sha256: e0787dd3ba4ae3b14cfcc84bd3349d332845838574405914bd00b4949fdede50
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.6
   run:
     - jinja2
     - nengo >=3.1.0
     - packaging
-    - python >=3.5
-    - scipy >=1.2.1
+    - python >=3.6
+    - scipy
 
 test:
   imports:
