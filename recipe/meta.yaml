@@ -9,6 +9,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nengo-loihi-{{ version }}.tar.gz
   sha256: e0787dd3ba4ae3b14cfcc84bd3349d332845838574405914bd00b4949fdede50
+  patches:
+    - support_nxsdk_1_0_0.patch
 
 build:
   number: 1
