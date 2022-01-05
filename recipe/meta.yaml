@@ -13,7 +13,7 @@ source:
     - support_nxsdk_1_0_0.patch
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -27,6 +27,20 @@ requirements:
     - packaging
     - python >=3.6
     - scipy
+    - h5py
+    - openpyxl
+    - attrdict
+    - numpy
+    - pandas
+    - matplotlib-base
+    - imageio
+    - scikit-image
+    - scikit-learn
+    - coloredlogs
+    - protobuf
+    - grpcio-tools
+    - memory_profiler
+    - bitstring
 
 test:
   imports:
