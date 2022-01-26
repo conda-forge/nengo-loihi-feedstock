@@ -1,5 +1,5 @@
 {% set name = "nengo-loihi" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 
 package:
@@ -8,12 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nengo-loihi-{{ version }}.tar.gz
-  sha256: e0787dd3ba4ae3b14cfcc84bd3349d332845838574405914bd00b4949fdede50
-  patches:
-    - support_nxsdk_1_0_0.patch
+  sha256: 4bbf60ba1d43592925385dfa61667863e7666c37802e354d629c718b5970c0c6
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
