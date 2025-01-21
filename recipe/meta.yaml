@@ -7,23 +7,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nengo-loihi-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nengo-loihi-{{ version }}.tar.gz
   sha256: 4bbf60ba1d43592925385dfa61667863e7666c37802e354d629c718b5970c0c6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - jinja2
     - nengo >=3.1.0
     - packaging
-    - python >=3.6
+    - python >={{ python_min }}
     - scipy
     - h5py
     - openpyxl
@@ -48,6 +48,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://www.nengo.ai/nengo-loihi
